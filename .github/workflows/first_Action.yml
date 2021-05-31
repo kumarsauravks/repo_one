@@ -34,3 +34,15 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+        
+      - name: Pushes test file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'tinfo.txt'
+        destination_repo: 'repo_two/samp1.txt'
+        destination_folder: 'test-dir'
+        user_email: 'kumarsauravks@gmail.com'
+        user_name: 'kumarsauravks'
+        commit_message: 'A custom message for the commit'
