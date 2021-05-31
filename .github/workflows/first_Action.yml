@@ -35,9 +35,9 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
         
-      - name: Pushes test file
+      - name: Copy
       #uses: dmnemec/copy_file_to_another_repo_action@main
-      uses: actions/checkout@v2
+      uses: andstor/copycat-action@v3
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
