@@ -37,7 +37,8 @@ jobs:
         
       - name: Copy
       #uses: dmnemec/copy_file_to_another_repo_action@main
-      uses: andstor/copycat-action@v3
+      #uses: andstor/copycat-action@v3
+      uses: 'repo_two/samp1@v3'
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
