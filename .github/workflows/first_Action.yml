@@ -36,11 +36,9 @@ jobs:
           echo test, and deploy your project.
         
       - name: Copy
-      #uses: dmnemec/copy_file_to_another_repo_action@main
-      #uses: andstor/copycat-action@v3
-      uses: 'repo_two/samp1@v3'
+        uses: repo_two/copy_file_to_another_repo_action@main
       env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        API_TOKEN_GITHUB: ${{ secrets.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 }}
       with:
         source_file: 'info.txt'
         destination_repo: 'repo_two/samp1.txt'
@@ -48,3 +46,14 @@ jobs:
         user_email: 'kumarsauravks@gmail.com'
         user_name: 'kumarsauravks'
         commit_message: 'A custom message for the commit'
+
+      #uses: dmnemec/copy_file_to_another_repo_action@main
+      #env:
+      #  API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      #with:
+      #  source_file: 'info.txt'
+      #  destination_repo: 'repo_two/samp1.txt'
+      #  destination_folder: 'repo_two'
+      #  user_email: 'kumarsauravks@gmail.com'
+      #  user_name: 'kumarsauravks'
+      #  commit_message: 'A custom message for the commit'
