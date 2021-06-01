@@ -36,26 +36,26 @@ jobs:
           echo test, and deploy your project.
         
       - name: Copy files to another repository
-  # You may pin to the exact commit or the version.
-  # uses: nkoppel/push-files-to-another-repository@0be7eeca3d4f544122c5cb268d41a79ababa8efa
-  uses: nkoppel/push-files-to-another-repository@v1.0.1
-  with:
-    # Files to be pushed to the destination repository. Accepts multiple filenames and globbing.
-    source-files: info.txt
-    # Name of the destination username/organization
-    destination-github-username: kumarsauravks
-    # Destination repository
-    destination-repository-name: repo_two
-    # Email for the git commit
-    user-email: kumarsauravks@gmail.com
-    # [Opitonal] Directory to copy files into in the destination repository
-    destination-directory: # optional, default is .
-    # [Optional] Username/organization for the destination repository
-    destination-repository-username: kumarsauravks # optional, default is 
-    # [Optional] set target branch name for the destination repository. Defaults to "master"
-    target-branch: # optional, default is master
-    # [Optional] commit message for the output repository. ORIGIN_COMMIT is replaced by the URL@commit in the origin repo
-    commit-message: # optional, default is Update from ORIGIN_COMMIT
+        # You may pin to the exact commit or the version.
+      -  uses: nkoppel/push-files-to-another-repository@0be7eeca3d4f544122c5cb268d41a79ababa8efa
+        #uses: nkoppel/push-files-to-another-repository@v1.0.1
+        with:
+          # Files to be pushed to the destination repository. Accepts multiple filenames and globbing.
+          source-files: info.txt
+          # Name of the destination username/organization
+          destination-github-username: kumarsauravks
+          # Destination repository
+          destination-repository-name: repo_two
+          # Email for the git commit
+          user-email: kumarsauravks@gmail.com
+          # [Opitonal] Directory to copy files into in the destination repository
+          destination-directory: # optional, default is .
+          # [Optional] Username/organization for the destination repository
+          destination-repository-username: kumarsauravks # optional, default is 
+          # [Optional] set target branch name for the destination repository. Defaults to "master"
+          target-branch: # optional, default is master
+          # [Optional] commit message for the output repository. ORIGIN_COMMIT is replaced by the URL@commit in the origin repo
+          commit-message: # optional, default is Update from ORIGIN_COMMIT
 
       #uses: dmnemec/copy_file_to_another_repo_action@main
       #env:
